@@ -9,8 +9,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mata_kuliah', function (Blueprint $table) {
-            $table->id();               // kolom id
-            $table->string('nama_mk');  // kolom nama mata kuliah
+            $table->uuid('id')->primary();               // kolom id
+            $table->string('nama_mk', 100);  // kolom nama mata kuliah
             $table->integer('sks');     // kolom sks
             $table->timestamps();       // created_at & updated_at
         });

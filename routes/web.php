@@ -30,4 +30,10 @@ Route::get('/matakuliah', [MataKuliahController::class, 'index']);
 Route::get('/matakuliah/create', [MataKuliahController::class, 'create'])->name('matakuliah.create');
 Route::post('/matakuliah', [MataKuliahController::class, 'store'])->name('matakuliah.store');
 
+Route::get('/mata-kuliah/{id}/edit', [MataKuliahController::class, 'edit'])->name('matakuliah.edit');
+Route::put('/mata-kuliah/{id}', [MataKuliahController::class, 'update'])->name('matakuliah.update');
+Route::delete('/mata-kuliah/{id}', [MataKuliahController::class, 'destroy'])->name('matakuliah.destroy');
 
+Route::get('/user/edit/{id}', [UserController::class, 'edit']);
+Route::post('/user/update/{id}', [UserController::class, 'update']);
+Route::get('/user/delete/{id}', [UserController::class, 'destroy']);
